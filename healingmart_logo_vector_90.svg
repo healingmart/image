@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="243.7 230.5 767.4 767.4" preserveAspectRatio="xMidYMid meet">
+  <title>HealingMart geometric logo — tight 90 percent canvas</title>
+  <desc>Clean vector reconstruction of the supplied HealingMart logo, scaled to occupy about 90 percent of a square artboard.</desc>
+  <g shape-rendering="geometricPrecision">
+    <path fill="#808F78" d="M444 269H810c39 0 70 21 87 56l44 96c17 37-8 69-47 69H360c-39 0-63-32-46-69l44-96c17-35 48-56 86-56Z"/>
+    <path fill="#505662" d="M394 519h132c40 0 71 31 71 71v299c0 39-31 70-71 70H394c-40 0-71-31-71-70V590c0-40 31-71 71-71Z"/>
+    <path fill="#DC9233" d="M697 519h164c39 0 70 31 70 70v64c0 39-31 70-70 70H697c-39 0-70-31-70-70v-64c0-39 31-70 70-70Z"/>
+    <path fill="#E3D8CB" d="M697 749h164c39 0 70 31 70 70v70c0 39-31 70-70 70H697c-39 0-70-31-70-70v-70c0-39 31-70 70-70Z"/>
+  </g>
+</svg>
