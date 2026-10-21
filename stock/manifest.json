@@ -1,5 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T15:06:18.086917+00:00",
-  "items": []
+  "updated_at": "2026-10-21T15:13:51.429876+00:00",
+  "items": [
+    {
+      "id": "44ef75e41587b4e1",
+      "kind": "image",
+      "title": "ChatGPT Image 2026년 9월 23일 오후 05 03 29 (9)-background-removed",
+      "category": "아이콘·기호",
+      "categories": [
+        "아이콘·기호"
+      ],
+      "tags": [
+        "HM-스톡",
+        "이미지",
+        "아이콘·기호",
+        "투명",
+        "누끼"
+      ],
+      "file": "ChatGPT Image 2026년 9월 23일 오후 05_03_29 (9)-background-removed.png",
+      "repo_path": "stock/assets/아이콘·기호/ChatGPT Image 2026년 9월 23일 오후 05_03_29 (9)-background-removed.png",
+      "url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%95%84%EC%9D%B4%EC%BD%98%C2%B7%EA%B8%B0%ED%98%B8/ChatGPT%20Image%202026%EB%85%84%209%EC%9B%94%2023%EC%9D%BC%20%EC%98%A4%ED%9B%84%2005_03_29%20%289%29-background-removed.png",
+      "download_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%95%84%EC%9D%B4%EC%BD%98%C2%B7%EA%B8%B0%ED%98%B8/ChatGPT%20Image%202026%EB%85%84%209%EC%9B%94%2023%EC%9D%BC%20%EC%98%A4%ED%9B%84%2005_03_29%20%289%29-background-removed.png",
+      "thumb_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%95%84%EC%9D%B4%EC%BD%98%C2%B7%EA%B8%B0%ED%98%B8/ChatGPT%20Image%202026%EB%85%84%209%EC%9B%94%2023%EC%9D%BC%20%EC%98%A4%ED%9B%84%2005_03_29%20%289%29-background-removed.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "transparent": true,
+      "size_bytes": 1798888,
+      "sha256": "44ef75e41587b4e1c0343c469db6d28f14b673367321e93b6970623d912fe120",
+      "added_at": "2026-10-21T15:13:51.428874+00:00",
+      "source": "github",
+      "license": "HealingMart Stock - uploader supplied"
+    }
+  ]
 }
