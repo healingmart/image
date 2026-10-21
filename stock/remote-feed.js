@@ -1,7 +1,7 @@
 (function(){
 'use strict';
-var MANIFEST='https://raw.githubusercontent.com/healingmart/image/main/stock/manifest.json';
-var CATEGORIES='https://raw.githubusercontent.com/healingmart/image/main/stock/categories.json';
+var MANIFEST='https://cdn.jsdelivr.net/gh/healingmart/image@main/stock/manifest.json';
+var CATEGORIES='https://cdn.jsdelivr.net/gh/healingmart/image@main/stock/categories.json';
 var cache=null,catCache=null,rendering=false,observer=null;
 
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
