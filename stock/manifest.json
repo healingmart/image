@@ -1,5 +1,36 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T14:13:06.018122+00:00",
-  "items": []
+  "updated_at": "2026-10-21T15:05:36.109648+00:00",
+  "items": [
+    {
+      "id": "38781f325e52baff",
+      "kind": "image",
+      "title": "hm-mistake-flow-test",
+      "category": "소품·오브젝트",
+      "categories": [
+        "소품·오브젝트"
+      ],
+      "tags": [
+        "HM-스톡",
+        "이미지",
+        "소품·오브젝트",
+        "투명",
+        "누끼"
+      ],
+      "file": "hm-mistake-flow-test.png",
+      "repo_path": "stock/assets/소품·오브젝트/hm-mistake-flow-test.png",
+      "url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/hm-mistake-flow-test.png",
+      "download_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/hm-mistake-flow-test.png",
+      "thumb_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/hm-mistake-flow-test.png",
+      "width": 320,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "size_bytes": 910,
+      "sha256": "38781f325e52baffe6decbd5b80333ebf6b996aab206c5dc819193140d70fd43",
+      "added_at": "2026-10-21T15:05:36.109131+00:00",
+      "source": "github",
+      "license": "HealingMart Stock - uploader supplied"
+    }
+  ]
 }
