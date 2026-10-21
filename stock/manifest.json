@@ -1,36 +1,5 @@
 {
   "version": 1,
   "updated_at": "2026-10-21T14:13:06.018122+00:00",
-  "items": [
-    {
-      "id": "59491745d2a37d2c",
-      "kind": "image",
-      "title": "auto-test-transparent",
-      "category": "테스트",
-      "categories": [
-        "테스트"
-      ],
-      "tags": [
-        "HM-스톡",
-        "이미지",
-        "테스트",
-        "투명",
-        "누끼"
-      ],
-      "file": "auto-test-transparent.png",
-      "repo_path": "stock/assets/테스트/auto-test-transparent.png",
-      "url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%ED%85%8C%EC%8A%A4%ED%8A%B8/auto-test-transparent.png",
-      "download_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%ED%85%8C%EC%8A%A4%ED%8A%B8/auto-test-transparent.png",
-      "thumb_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%ED%85%8C%EC%8A%A4%ED%8A%B8/auto-test-transparent.png",
-      "width": 512,
-      "height": 512,
-      "format": "PNG",
-      "transparent": true,
-      "size_bytes": 2936,
-      "sha256": "59491745d2a37d2c28eb884a53968cc06e8d895944f2515271b5fd3ea11f9e01",
-      "added_at": "2026-10-21T14:13:06.017619+00:00",
-      "source": "github",
-      "license": "HealingMart Stock - uploader supplied"
-    }
-  ]
+  "items": []
 }
