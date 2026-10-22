@@ -545,6 +545,12 @@ def process_batch():
         if categories_changed:
             purge_targets += ["stock/categories.json","stock/categories.js"]
         if purge_targets:
+            # GitHub raw/content propagation can lag a few seconds immediately after push.
+            # Purging jsDelivr too early may repopulate the CDN with the previous manifest,
+            # so wait briefly and purge twice for reliable folder/image visibility.
+            time.sleep(3.0)
+            purge_jsdelivr(purge_targets)
+            time.sleep(2.0)
             purge_jsdelivr(purge_targets)
 
     if seqs_dirty:
