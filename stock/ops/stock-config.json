@@ -1,0 +1,19 @@
+{
+  "base_dir": "E:\\HealingMart-Stock",
+  "upload_dir": "E:\\HealingMart-Stock\\UPLOAD",
+  "done_dir": "E:\\HealingMart-Stock\\DONE",
+  "error_dir": "E:\\HealingMart-Stock\\ERROR",
+  "meta_dir": "E:\\HealingMart-Stock\\META",
+  "thumbs_dir": "E:\\HealingMart-Stock\\THUMBS",
+  "repo_dir": "C:\\Users\\user\\Documents\\GitHub\\image",
+  "repo_full_name": "healingmart/image",
+  "repo_branch": "main",
+  "asset_root": "stock/assets",
+  "manifest_path": "stock/manifest.json",
+  "manifest_js_path": "stock/manifest.js",
+  "public_base": "https://raw.githubusercontent.com/healingmart/image/main/",
+  "image_extensions": [".png", ".webp", ".jpg", ".jpeg", ".gif"],
+  "video_extensions": [".mp4", ".mov", ".webm", ".m4v"],
+  "video_enabled": false,
+  "scan_seconds": 5
+}
