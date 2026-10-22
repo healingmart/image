@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T06:58:18.612559+00:00",
+  "updated_at": "2026-10-22T07:16:59.377332+00:00",
   "items": [
     {
       "id": "44ef75e41587b4e1",
@@ -23,10 +23,10 @@
       "repo_path": "stock/assets/소품·오브젝트/full/소품·오브젝트-001.webp",
       "preview_repo_path": "stock/assets/소품·오브젝트/preview/소품·오브젝트-001.webp",
       "thumb_repo_path": "stock/assets/소품·오브젝트/thumb/소품·오브젝트-001.webp",
-      "url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/preview/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp",
-      "preview_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/preview/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp",
+      "url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/preview/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp?v=44ef75e41587b4e1-wmtext1",
+      "preview_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/preview/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp?v=44ef75e41587b4e1-wmtext1",
       "download_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/full/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp",
-      "thumb_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/thumb/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp",
+      "thumb_url": "https://raw.githubusercontent.com/healingmart/image/main/stock/assets/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8/thumb/%EC%86%8C%ED%92%88%C2%B7%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8-001.webp?v=44ef75e41587b4e1-wmtext1",
       "width": 1254,
       "height": 1254,
       "format": "WEBP",
@@ -36,7 +36,8 @@
       "sha256": "44ef75e41587b4e1c0343c469db6d28f14b673367321e93b6970623d912fe120",
       "added_at": "2026-10-22T06:58:18.608559+00:00",
       "source": "github",
-      "license": "HealingMart Stock License"
+      "license": "HealingMart Stock License",
+      "watermark_version": "text-center-v1"
     }
   ]
 }

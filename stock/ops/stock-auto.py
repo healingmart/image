@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
 from urllib.request import urlopen, Request
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 BASE = Path(r"E:\HealingMart-Stock")
 CFG = json.loads((BASE / "stock-config.json").read_text(encoding="utf-8"))
@@ -101,20 +101,35 @@ def fit_copy(im, max_edge):
     return out
 
 def apply_logo(im):
+    # Preview/thumbnail watermark: centered text only.
+    # The clean full-resolution download remains untouched.
     base=im.convert("RGBA")
-    if not LOGO_FILE.exists():
-        return base
-    with Image.open(LOGO_FILE) as lg:
-        logo=lg.convert("RGBA")
-        target=max(90,min(260,int(base.width*0.18)))
-        ratio=target/max(1,logo.width)
-        logo=logo.resize((target,max(1,int(logo.height*ratio))),Image.Resampling.LANCZOS)
-        alpha=logo.getchannel("A").point(lambda v:int(v*0.72))
-        logo.putalpha(alpha)
-        pad=max(12,int(base.width*0.018))
-        x=max(0,base.width-logo.width-pad)
-        y=max(0,base.height-logo.height-pad)
-        base.alpha_composite(logo,(x,y))
+    text="HealingMart Stock"
+    draw=ImageDraw.Draw(base)
+    font_path=Path(r"C:\Windows\Fonts\seguisb.ttf")
+    fallback=Path(r"C:\Windows\Fonts\arialbd.ttf")
+    font_file=font_path if font_path.exists() else fallback
+    target_w=max(180,int(base.width*0.42))
+    size=max(18,int(base.width*0.07))
+    font=None
+    while size>=12:
+        try:
+            font=ImageFont.truetype(str(font_file),size)
+        except Exception:
+            font=ImageFont.load_default()
+        box=draw.textbbox((0,0),text,font=font,stroke_width=max(1,size//24))
+        if box[2]-box[0] <= target_w:
+            break
+        size-=2
+    box=draw.textbbox((0,0),text,font=font,stroke_width=max(1,size//24))
+    tw,th=box[2]-box[0],box[3]-box[1]
+    x=(base.width-tw)//2
+    y=(base.height-th)//2-box[1]
+    stroke=max(1,size//24)
+    # Soft dark underlay plus translucent white lettering keeps the mark legible
+    # on both light and dark stock while remaining obviously a preview watermark.
+    draw.text((x+2,y+2),text,font=font,fill=(0,0,0,95),stroke_width=stroke,stroke_fill=(0,0,0,110))
+    draw.text((x,y),text,font=font,fill=(255,255,255,105),stroke_width=stroke,stroke_fill=(255,255,255,45))
     return base
 
 def save_webp(im, path, transparent, preview=False):
