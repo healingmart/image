@@ -1,0 +1,33 @@
+name: Build HealingMart Cloudflare article WebP assets
+on:
+  push:
+    paths:
+      - "_tmp-hm-cloudflare-article/**"
+      - ".github/workflows/build-hm-cloudflare-article-assets.yml"
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install SVG and WebP tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin webp fonts-noto-cjk
+      - name: Convert SVG assets to WebP
+        run: |
+          rsvg-convert -w 1200 -h 630 _tmp-hm-cloudflare-article/hero.svg -o /tmp/hero.png
+          cwebp -quiet -q 82 /tmp/hero.png -o github-actions-cloudflare-worker-auto-deploy-hero.webp
+          rsvg-convert -w 1200 -h 675 _tmp-hm-cloudflare-article/summary.svg -o /tmp/summary.png
+          cwebp -quiet -q 82 /tmp/summary.png -o github-actions-cloudflare-worker-auto-deploy-summary.webp
+          rsvg-convert -w 1200 -h 675 _tmp-hm-cloudflare-article/flow.svg -o /tmp/flow.png
+          cwebp -quiet -q 82 /tmp/flow.png -o github-actions-cloudflare-worker-auto-deploy-flow.webp
+      - name: Commit generated WebP assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-actions-cloudflare-worker-auto-deploy-hero.webp github-actions-cloudflare-worker-auto-deploy-summary.webp github-actions-cloudflare-worker-auto-deploy-flow.webp
+          git diff --cached --quiet && exit 0
+          git commit -m "Add Cloudflare GitHub Actions article WebP assets"
+          git push
