@@ -1,0 +1,59 @@
+name: Fix HealingMart Cloudflare flow WebP with Pillow
+on:
+  push:
+    paths:
+      - ".github/workflows/fix-hm-cloudflare-flow-pillow.yml"
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Build flow image
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          W,H=1200,675
+          im=Image.new("RGB",(W,H),"#f8fafc")
+          d=ImageDraw.Draw(im)
+          fb="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+          fr="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+          def font(path,size): return ImageFont.truetype(path,size)
+          d.text((60,45),"GitHub to Cloudflare - deployment flow",font=font(fb,42),fill="#111827")
+          d.text((60,105),"main push on a GitHub-hosted runner",font=font(fr,22),fill="#64748b")
+          cards=[
+            (55,"#2563eb","#eff6ff","1  GIT PUSH","code / data change"),
+            (280,"#7c3aed","#f5f3ff","2  ACTIONS","ubuntu-latest"),
+            (505,"#eab308","#fffbeb","3  VALIDATE","build / test"),
+            (730,"#f97316","#fff7ed","4  WRANGLER","wrangler deploy"),
+            (955,"#0f9f6e","#ecfdf5","5  CLOUDFLARE","WORKER / new deployment"),
+          ]
+          for i,(x,c,bg,t1,t2) in enumerate(cards):
+              d.rounded_rectangle((x,220,x+190,400),radius=24,fill=bg,outline=c,width=3)
+              d.text((x+22,270),t1,font=font(fb,21 if i==4 else 23),fill="#111827")
+              if i==4:
+                  d.text((x+22,315),"WORKER",font=font(fb,21),fill="#111827")
+                  d.text((x+22,352),"new deployment",font=font(fr,16),fill="#64748b")
+              else:
+                  d.text((x+22,330),t2,font=font(fr,18),fill="#64748b")
+              if i<4:
+                  d.text((x+198,277),">",font=font(fb,40),fill="#94a3b8")
+          d.rounded_rectangle((60,500,1140,600),radius=20,fill="#eef6ff",outline="#c5daf5",width=2)
+          d.text((88,525),"WHY YOUR PC CAN BE OFF",font=font(fb,23),fill="#1d4ed8")
+          d.text((88,565),"The GitHub-hosted runner executes the job. A self-hosted runner must stay online.",font=font(fr,18),fill="#334155")
+          im.save("github-actions-cloudflare-worker-auto-deploy-flow.webp","WEBP",quality=82,method=6)
+          PY
+      - name: Commit image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-actions-cloudflare-worker-auto-deploy-flow.webp
+          git diff --cached --quiet && exit 0
+          git commit -m "Fix Cloudflare article flow image"
+          git push
