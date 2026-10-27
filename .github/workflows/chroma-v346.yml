@@ -1,0 +1,49 @@
+name: Generate chroma key v3.46 assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/chroma-v346.yml"
+      - ".tmp-chatgpt/chroma_v346.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install image dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+          python -m pip install --upgrade pip pillow
+      - name: Generate final WebP assets
+        run: python .tmp-chatgpt/chroma_v346.py
+      - name: Commit generated assets
+        run: |
+          git config user.name "HealingMart Automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            chroma-key-remover-guide-hero.webp \
+            chroma-key-remover-guide-01-start-exact.webp \
+            chroma-key-remover-guide-01-start-mobile.webp \
+            chroma-key-remover-guide-02-controls-exact.webp \
+            chroma-key-remover-guide-02-controls-mobile.webp \
+            chroma-key-remover-guide-03-export-exact.webp \
+            chroma-key-remover-guide-03-export-mobile.webp \
+            .tmp-chatgpt/chroma-v346-done.txt
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Finalize chroma key guide images for v3.46"
+            git push
+          fi
