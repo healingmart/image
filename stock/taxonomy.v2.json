@@ -1,0 +1,148 @@
+{
+  "schema_version": 2,
+  "description": "Stable upload taxonomy: group = file type; subject = topic; tags = search. Keep stable IDs.",
+  "groups": [
+    {
+      "id": "images",
+      "label": "이미지·일러스트",
+      "formats": [
+        "png",
+        "jpg",
+        "jpeg",
+        "webp",
+        "tif",
+        "tiff"
+      ]
+    },
+    {
+      "id": "video",
+      "label": "영상·VFX",
+      "formats": [
+        "mp4",
+        "webm"
+      ]
+    },
+    {
+      "id": "3d",
+      "label": "3D 스톡",
+      "formats": [
+        "glb"
+      ]
+    },
+    {
+      "id": "motion",
+      "label": "웹 애니메이션",
+      "formats": [
+        "json",
+        "css",
+        "mp4",
+        "webm"
+      ]
+    },
+    {
+      "id": "ui",
+      "label": "UI 컴포넌트",
+      "formats": [
+        "zip"
+      ]
+    },
+    {
+      "id": "diagram",
+      "label": "인터랙티브 다이어그램",
+      "formats": [
+        "svg",
+        "zip"
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "misc",
+      "label": "기타"
+    },
+    {
+      "id": "money",
+      "label": "돈·재물"
+    },
+    {
+      "id": "animals",
+      "label": "동물"
+    },
+    {
+      "id": "water-weather",
+      "label": "물·날씨"
+    },
+    {
+      "id": "backgrounds",
+      "label": "배경"
+    },
+    {
+      "id": "fire-explosion",
+      "label": "불꽃·폭발"
+    },
+    {
+      "id": "light-effects",
+      "label": "빛·이펙트"
+    },
+    {
+      "id": "objects",
+      "label": "소품·오브젝트"
+    },
+    {
+      "id": "icons-symbols",
+      "label": "아이콘·기호"
+    },
+    {
+      "id": "smoke-clouds",
+      "label": "연기·구름"
+    },
+    {
+      "id": "food",
+      "label": "음식"
+    },
+    {
+      "id": "people-hands",
+      "label": "인물·손"
+    },
+    {
+      "id": "nature-plants",
+      "label": "자연·식물"
+    },
+    {
+      "id": "frames-bubbles",
+      "label": "프레임·말풍선"
+    },
+    {
+      "id": "technology",
+      "label": "기술"
+    },
+    {
+      "id": "architecture",
+      "label": "건축"
+    },
+    {
+      "id": "business",
+      "label": "비즈니스"
+    },
+    {
+      "id": "education",
+      "label": "교육"
+    }
+  ],
+  "legacy_category_mapping": {
+    "기타": "misc",
+    "돈·재물": "money",
+    "동물": "animals",
+    "물·날씨": "water-weather",
+    "배경": "backgrounds",
+    "불꽃·폭발": "fire-explosion",
+    "빛·이펙트": "light-effects",
+    "소품·오브젝트": "objects",
+    "아이콘·기호": "icons-symbols",
+    "연기·구름": "smoke-clouds",
+    "음식": "food",
+    "인물·손": "people-hands",
+    "자연·식물": "nature-plants",
+    "프레임·말풍선": "frames-bubbles"
+  }
+}
